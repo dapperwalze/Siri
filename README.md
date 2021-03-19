@@ -1,3 +1,13 @@
+# Siri App
+
+This project is an application for effective and efficient time management.
+
+The app allows you to set up a task and attach a timeframe to it.
+
+With Siri, you can create a task, edit/update a task, favorite a task and delete a task. Also, it has a menu to toggle some of the app's features.
+
+You can start up the application by firstly cloning the application, install, then run npm start.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

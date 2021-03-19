@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e1f8ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.jumbotron {
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  background-color: #e1f8ff;
+  background-image: linear-gradient(#e1f8ff, #ebfcff);
+}
+.task-display-card {
+  width: 100%;
+  max-width: 350px;
+  min-height: 450px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: auto;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 1.5);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 1.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.task-display-card-header {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  height: 80px;
+  background-color: #1ae7ff;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  text-align: center;
+  background-image: linear-gradient(to right, #39c0cf, #46c3ff);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.task-item {
+  width: 100%;
+  max-width: 350px;
+  padding-top: 10px;
+  display: flex;
+}
+.task-details {
+  width: 70%;
+  max-width: 350px;
+  padding: 10px;
+}
+.task-time {
+  padding: 0px 10px 5px 10px;
+  color: #000;
+  opacity: 0.3;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.task-title {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  color: #000;
+  opacity: 0.6;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0px !important;
+  word-break: break-all;
+}
+.task-cta-container {
+  width: 30%;
+  height: 67px;
+  padding: 5px 15px 13px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.cta-button {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  outline: none;
+  padding: 7px 0px 3px 0px;
+  border: none;
+  color: #82c5e9;
+  margin-left: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.float-button {
+  width: 20%;
+  max-width: 60px;
+  height: 60px;
+  background-color: #46c3ff;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  left: calc(50% - 30px);
+  bottom: -30px;
+  cursor: pointer;
+  margin: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.row {
+  width: 100%;
+  max-width: 300px;
+  height: 45px;
+  margin: auto;
+  margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskInputField,
+.task-deadline {
+  width: 100%;
+  height: 40px;
+  padding: 6px 15px;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(18, 18, 18, 0.3);
+  box-sizing: border-box;
+  outline: none;
+}
+label {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.75);
+  margin-left: 5px;
+}
+.create-task-button {
+  width: 100%;
+  height: 40px;
+  padding: 6px 15px;
+  background-color: #46c3ff;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 7px;
 }
