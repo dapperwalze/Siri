@@ -12,15 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: [
-        {
-          id: uuidv4(),
-          title: "",
-          deadline: "",
-          isTaskComplete: false,
-          isFavorite: false,
-        },
-      ],
+      tasks: [],
       modalIsVisible: false,
     };
     this.showModal = this.showModal.bind(this);
