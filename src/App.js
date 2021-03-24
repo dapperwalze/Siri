@@ -95,7 +95,18 @@ class App extends Component {
       ),
     });
   }
+  componentDidMount() {
+    const locallyStoredValue = localStorage.getItem("taskList");
+    const parsedTaskItem = JSON.parse(locallyStoredValue);
+    this.setState({
+      tasks: parsedTaskItem || [],
+    });
+  }
 
+  componentDidUpdate() {
+    const taskItem = JSON.stringify(this.state.tasks);
+    localStorage.setItem("taskList", taskItem);
+  }
   render() {
     return (
       <div className="jumbotron">
